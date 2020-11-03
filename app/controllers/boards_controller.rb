@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   before_action :set_board, only:[:show, :edit, :update, :destroy]
   def index
-    @boards = Board.all
+    @boards = Board.page(params[:page])
   end
 
   def new
