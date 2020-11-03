@@ -27,10 +27,12 @@ class BoardsController < ApplicationController
   end
 
   def edit
+    @board.attributes = flash[:board] if flash[:board]
   end
 
   def update
     if @board.update(board_params)
+      flash[:notice] = "編集が完了しました"
       redirect_to @board
     else
       redirect_to :back,flash: {
