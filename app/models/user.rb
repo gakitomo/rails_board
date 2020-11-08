@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :integer          not null, primary key
+#  birthday        :date
 #  name            :string(255)      not null
 #  password_digest :string(255)      not null
 #  created_at      :datetime         not null
@@ -23,6 +24,10 @@ class User < ApplicationRecord
       with: /\A[a-z0-9]+\z/,
       message: 'は小文字英数字で入力してください'
     }
-    validates :password,
-      length: {minimum: 8}
+  validates :password,
+    length: {minimum: 8}
+
+  def age
+    0
+  end
 end
