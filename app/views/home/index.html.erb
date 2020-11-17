@@ -1,1 +1,9 @@
-<%= render partial: 'users/login_form' %>
+<div class="d-flex justify-content-center">
+  <h1>掲示板へようこそ</h1>
+</div>
+<div class="d-flex justify-content-center">
+    <%= link_to '新規登録', new_user_path, class: 'btn btn-outline-primary' %>
+    <%= link_to 'ログイン', root_path, class: 'btn btn-outline-primary' %>
+</div>
+
+<%# <%= render partial: 'users/login_form' %>
