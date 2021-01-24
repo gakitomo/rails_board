@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rails-flog', require: 'flog'
   gem 'rspec-rails', '~> 3.8'
   gem 'rails-controller-testing'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -52,6 +53,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-byebug'
   gem 'annotate'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
